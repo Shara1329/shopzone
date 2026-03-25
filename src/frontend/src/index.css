@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    --background: 0.99 0.002 270;
+    --foreground: 0.14 0.005 260;
+
+    --card: 1 0 0;
+    --card-foreground: 0.14 0.005 260;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.14 0.005 260;
+
+    --primary: 0.45 0.26 294;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.96 0.02 294;
+    --secondary-foreground: 0.45 0.26 294;
+
+    --muted: 0.96 0.008 270;
+    --muted-foreground: 0.52 0.015 260;
+
+    --accent: 0.94 0.03 294;
+    --accent-foreground: 0.35 0.22 294;
+
+    --destructive: 0.63 0.22 25;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.92 0.005 270;
+    --input: 0.92 0.005 270;
+    --ring: 0.45 0.26 294;
+
+    --chart-1: 0.45 0.26 294;
+    --chart-2: 0.63 0.22 25;
+    --chart-3: 0.83 0.16 85;
+    --chart-4: 0.6 0.16 220;
+    --chart-5: 0.7 0.14 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.72 0.12 294),
+      oklch(0.55 0.18 294)
+    );
+  }
+  .lavender-band {
+    background-color: oklch(0.97 0.015 294);
+  }
+  .card-shadow {
+    box-shadow: 0 2px 12px oklch(0 0 0 / 0.08);
+  }
+  .card-shadow-hover {
+    box-shadow: 0 8px 32px oklch(0.45 0.26 294 / 0.15), 0 2px 12px
+      oklch(0 0 0 / 0.08);
+  }
+}
